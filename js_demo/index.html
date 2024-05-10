@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma | JS Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/Javascript" src="js/script.js"></script>
+</head>
+<body>
+    <div>
+        <h1>today we will learn about coriolanus snow</h1>
+    </div>
+    <div>
+        <h2>who is he?</h2>
+        <p><a href="https://pin.it/5cfFRTOWp" target="_blank" onclick="alert('have fun!')">this is him!</a></p>
+
+        <h2>now you may have heard some wild rumors that he murdered someone...</h2>
+        <button onclick="document.getElementById('add').innerHTML = 50000">do you know how many of these i have heard?</button>
+        <p id="add"></p>
+        <p>and although they may be true...</p>
+
+        <button onclick="document.getElementById('change-text').innerHTML='but i can fix him! (no really i can!)'">you see...</button>
+        <p id="change-text">he might have done a couple of bad things in his life...</p>
+
+        <h2>we met each other on december 13th 2009! i was born on may 21st 2010!</h2>
+        <button onclick="document.getElementById('date').innerHTML=Date()">how long has it been since we met each other?</button>
+        <p id="date"></p>
+
+        <h2>chelsea says that i am delulu...</h2>
+        <p>but she just doesn't believe in true love</p>
+        <button onclick="pFun()">she is unsupportive😔</button>
+        <p id="p-fun"></p>
+
+        <h2>hey whats your name?</h2>
+        <button onclick="askName()">click here to enter your name</button>
+        <p id="ask-name"></p>
+
+        <h2>so what do YOU think of our relationship?</h2>
+        <button onclick="askQuestion()">i need all the support that i can get!</button>
+        <p id="question"></p>
+
+        <h2>do you want to see a picture of my darling corcor future husband baby?!</h2>
+        <button onclick="snowImage()">here he is!</button>
+        <br>
+        <img id="snow" src="" width="400px">
+
+        <p style="color:red">wait... i need to go... someone is banging on the door...</p>
+        <p style="color:red">ITS COIROALUS HES CHSAING ME WTIH A GINAT SLDEGE HMAMER</p>
+    </div>
+
+    <script>
+        function pFun() {
+            var p = document.getElementById('p-fun');
+            p.innerHTML = 'anyways my name is now emma snow 💍💖💖';
+            p.style.fontSize = '30px';
+            p.style.color = 'white';
+            p.style.textAlign = 'center';
+        }
+
+        function askName() {
+            var nameReturn = document.getElementById('ask-name');
+            var name = prompt('Please enter your name' , 'HERE');
+            if (name == '' || name == 'HERE') {
+                alert('Please try again');
+            } else {
+                nameReturn.innerHTML = 'hi ' + name + '! what do you think of me and 💖coryo💖?!';
+            }
+        }
+
+        alert('hello!\nare you excited to learn about coriolanus snow?!')
+    </script>
+</body>
+</html>

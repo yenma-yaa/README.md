@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma | Choose Your Own Adventure Game</title>
+</head>
+<body>
+    <script>
+    function playGame() {
+        var accept = confirm("do you want to play this game?");
+        alert(accept);
+        if (accept == true) {
+            alert("okay! proceed");
+
+            var stepTwo = prompt("you are an escaped prisoner from district 12, you are running away from guards! which path are you taking?! option one is going up the tree, option 2 is going around the corner, option 3 is straight forward; type 1, 2, 3 accordingly!");
+            if  (stepTwo == 1) {
+                alert("you start to scale the tree but oh no! you fell and died! GAME OVER!");
+            } else if (stepTwo == 3) {
+                alert("you soon reach a roadblock and the gaurds catch up! GAME OVER!");
+            } else if (stepTwo == 2) {
+                alert("you see a man, do you run around him or ask him for help?!");
+
+                var stepThree = prompt("type one to go around him and type two to ask for help!");
+                if (stepThree == "one") {
+                    alert("he stops you and the guards catch up! GAME OVER!")
+                } 
+                else if (stepThree == "two") {
+                    alert("he looks at you and decides to let you pass him! when the guards come, he hides you!");
+
+                    var stepFour = prompt("you then realize he is one of the people who killed your sister! what do you do?! type 1 to punch him in the face, type 2 to run away in fear, and type 3 to thank him for saving you!");
+                    if (stepFour == 1) {
+                        alert("he gets upset and turns you in! GAME OVER!");
+                    } 
+                    else if (stepFour == 2) {
+                        alert("you run into the guards! GAME OVER!");
+                    } 
+                    else if (stepFour == 3) {
+                        alert("he smiles and tells you no problem!");
+                        
+                        var stepFive = prompt("he offers to get you dinner as you looked quite famished. type 1 to scream at him, type 2 to agree to go, and type 3 to politely reject him!")
+                        if (stepFive == 1) {
+                            alert("he turns you in! GAME OVER!");
+                        }
+                        else if (stepFive == 3) {
+                            alert("he isn't used to being rejected! (kind of a red flag to be honest!) he turns you in! GAME OVER!")
+                        }
+                        else if (stepFive == 2) {
+                            var stepSix  = prompt("he introduces himself as coriolanus, but you can call him coryo! he asks your name! type 1 to tell him the truth of who you are or type 2 to lie and make a fake name!");
+                            if (stepSix == 1) {
+                                alert("he gets upset and turns you in! GAME OVER!");
+                            }
+                            else if (stepSix == 2) {
+                                var stepSeven = prompt("he then asks you why you were being chased by the police! type 1 to lie and say you are a person from the capitol who committed a crime, type 2 to lie and say you are a person from district 12 who committed a crime, or type 3 to tell the truth that you tried to get revenge on the people who killed your sister (including him)!");
+                                if (stepSeven == 2) {
+                                    alert("a person from district 12?! GAME OVER!");
+                                }
+                                if (stepSeven == 3) {
+                                    alert("he gets upset when confronted with his crimes! GAME OVER!");
+                                }
+                                else if (stepSeven == 1) {
+                                    var stepEight = prompt("he understands and you guys head to dinner! he offers a room for you in his home after! do you agree?! type no or yes!");
+                                    if (stepEight == "no") {
+                                        alert("he gets upset! (rejection issues much?!) GAME OVER!");
+                                    }
+                                    else if (stepEight == "yes") {
+                                        alert("you guys go back and spend time together! soon you guys fall in love!")
+
+                                        var stepNine = prompt("he asks you to marry him! do you agree?! type no, yes, or maybe!")
+                                        if (stepNine == "no") {
+                                            alert("how could you! he saved your life and he has rejection issues! GAME OVER!")
+                                        }
+                                        else if (stepNine == "maybe") {
+                                            alert("he hates hesitation! it's almost as bad as being rejected! GAME OVER!")
+                                        }
+                                        else if (stepNine == "yes") {
+                                            alert("CONGRATULATIONS! YOU FIXED HIM!! YOU GUYS ARE PLANNING YOUR WEDDING AND WILL LIVE HAPPILY EVER AFTER!!! (until he meets lucy gray...!(!!!)) GAME (HAPPILY) OVER!!!!!");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } 
+                else {
+                    alert("please try again!");
+                }
+            } 
+            else {
+                alert("please try again!");
+            }
+        } 
+        else {
+            alert("why would you click into the game if you didn't want to play?! try again!");
+            confirm(accept);
+        }
+
+        var playAgain = confirm("do you want to play again?");
+        if (playAgain == true) {
+            playGame();
+        } else {
+            alert("thanks for playing! bye bye!");
+        }
+    }
+        playGame();
+
+    </script>
+</body>
+</html>
